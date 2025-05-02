@@ -1,0 +1,64 @@
+<program> ::= <function>
+
+<function> ::= <function> <stmt>
+             | ε
+             | "func" <identifier> "(" <param_list> ")" "{" <stmt_list> "}"
+
+<param_list> ::= <identifier>
+               | <param_list> "," <identifier>
+               | ε
+
+<stmt_list> ::= <stmt>
+              | <stmt_list> <stmt>
+
+<stmt> ::= <empty_stmt>
+         | <assignment_stmt>
+         | <print_stmt>
+         | <loop_stmt>
+         | <condition_stmt>
+         | <block_stmt>
+         | <exception_stmt>
+         | <exp> ";"
+
+<empty_stmt> ::= ";"
+
+<assignment_stmt> ::= <identifier> "=" <exp> ";"
+
+<print_stmt> ::= "print" "(" <exp> ")" ";"
+
+<block_stmt> ::= "{" <stmt_list> "}"
+
+<loop_stmt> ::= "while" "(" <exp> ")" <block_stmt>
+
+<condition_stmt> ::= "if" "(" <exp> ")" <block_stmt>
+                   | "if" "(" <exp> ")" <block_stmt> "else" <block_stmt>
+
+<exception_stmt> ::= "try" <block_stmt> "catch" "(" <identifier> ")" <block_stmt>
+
+
+
+
+<exp> ::= <number>
+        | <identifier>
+        | <exp> "+" <exp>
+        | <exp> "-" <exp>
+        | <exp> "*" <exp>
+        | <exp> "/" <exp>
+        | <exp> "%" <exp>
+        | <exp> "==" <exp>
+        | <exp> "!=" <exp>
+        | <exp> "<" <exp>
+        | <exp> "<=" <exp>
+        | <exp> ">" <exp>
+        | <exp> ">=" <exp>
+        | <exp> "&&" <exp>
+        | <exp> "||" <exp>
+        | "!" <exp>
+        | "(" <exp> ")"
+
+<identifier> ::= 'a' | 'b' | ... | 'z'
+<number>     ::= [0-9]+
+
+<comment_stmt> ::= "~" <character>* "~"
+
+<character> ::= "'" [a-zA-Z0-9_ .,!?] "'"

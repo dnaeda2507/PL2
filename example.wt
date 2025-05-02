@@ -1,0 +1,116 @@
+
+
+~ bu bir yorum satırıdır~
+
+~atama~
+a = 5;
+b = 10;
+
+print(a);
+print(b);
+
+~işlem önceliği~
+c = 2 + 3 / (2 + 3 * 1);
+print(c);
+
+~if else ve iç içe yapılar~
+if (a < b) {
+    print(a);
+    if (c > a) {
+        print(c);
+    } else {
+        print(b);
+    }
+} else {
+    print(b);
+}
+
+~daha karmaşık if else~
+d = 10;
+b = 20;
+c = 30;
+
+if ((d > 5 && b < 25) || c > 40) {
+    print(d);
+    if (b > 15) {
+        print(b);
+        if (c == 30) {
+            print(c);
+        }
+    }
+} else {
+    print(d);
+}
+
+~while ve iç içe yapılar~
+e = 0;
+
+while (e < 3) {
+    print(e);
+    b = 0;
+    while (b < 2) {
+        print(b);
+        if (b == 1) {
+            print(e + b);
+        }
+        b = b + 1;
+    }
+    e= e + 1;
+}
+
+~daha karmaşık iç içe while~
+f = 0;
+b = 3;
+
+while (f < 3) {
+    print(a);
+    if (f == 1) {
+        print(b);
+        c = 0;
+        while (c < 2) {
+            print(c);
+            c = c + 1;
+        }
+    }
+    f = f + 1;
+}
+
+~işlem önceliği ve iç içe yapılar~
+g = 5;
+b = 10;
+c = 15;
+
+if ((g + b) > c && b < c) {
+    print(a);
+    while (a < c) {
+        print(a);
+        g = g + 5;
+    }
+} else {
+    print(c);
+}
+
+
+~ try-catch ve integer işlemleri örneği ~
+
+a = 10;
+b = 0;
+
+try {
+    c = a % b;  
+    print(c);
+} catch (e) {
+    print(a);  
+}
+
+
+ func g() {
+    a = 10;
+    print(a);
+} 
+
+func g(a) { 
+    
+    print(a);
+}
+
