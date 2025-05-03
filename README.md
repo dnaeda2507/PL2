@@ -97,52 +97,54 @@
 White is a simple programming language that includes fundamental programming constructs such as variable assignments, loops, conditions, functions, and expressions. Below is a detailed explanation of its syntax and features based on its BNF grammar
 
 ***File Extension***
-* White programs are written in files with the .wt extension
+* White programs are written in files with the `.wt` extension
 
 ***Statements***
 * 	A program consists of at least one statement.
 *	A statement can be one of the following: 
-       - Variable assignments
-	   - Constant definitions
-	   - I f-else conditions
-	   - Loops (while)
-	   - Commands like print, exit, or input
+       - ``Variable assignments``
+	   - ``Constant definitions``
+	   - ``If-else conditions``
+	   - ``Loops (while)``
+	   - ``Commands like print, exit, or input``
 
 ***Commands***
 *  Printing:
-   - print(expression) is used to display output.
+   - `print(expression)` is used to display output.
 *	Exiting:
-    - The exit command terminates the program.
+    - The `exit` command terminates the program.
 *	Taking Input:
-    - input(identifier) is used to take user input.
+    - `input(identifier)` is used to take user input.
 
 ***Variables and Constants***
-* 	Variables are assigned using = and can store different data types.
+* 	Variables are assigned using `=` and can store different data types.
 *	Constants are defined using the const keyword.
 
 *Data Types:*
-   -   Boolean: true, false
-   -   Integer: 123
-   -   Float: 3.14
-   -   Character: 'a'
-   -  String: "Hello"
-   -  Identifiers: Variable names must start with a letter and can contain letters, numbers, and underscores
+   -   ``Boolean:`` true, false
+   -   ``Integer:`` 123
+   -   ``Float:`` 3.14
+   -   ``Character:`` 'a'
+   -  ``String:`` "Hello"
+   -  ``Identifiers:`` Variable names must start with a letter and can contain letters, numbers, and underscores
 
 ***Functions***
-*	Functions are defined using the func keyword and can take parameters.
+*	Functions are defined using the `func` keyword and can take parameters.
 
 ***Expressions and Operators***
 
 * Arithmetic operations:
-    -	Addition (+), Subtraction (-), Multiplication (*), Division (/)
-    -	Modulo (%)
+    -	``Addition (+), Subtraction (-), Multiplication (*), Division (/), Modulo (%)``
 
 ***Conditions and Comparisons***
-* 	Comparison Operators: <, >, ==, !=, <=, >=
-*	Logical Operators: &&, ||, !
+* 	Comparison Operators:` <, >, ==, !=, <=, >=`
+*	Logical Operators: `&&, ||, !`
+
+***Blocks***
+ Code blocks are enclosed in `{}` and support nested statements
 
 ***Control Flow***
-* if (a < b) {
+* `if (a < b) {
     print(a);
     if (c > a) {
         print(c);
@@ -151,8 +153,8 @@ White is a simple programming language that includes fundamental programming con
     }
 } else {
     print(b);
-}
-* while (e < 3) {
+}`
+* `while (e < 3) {
     print(e);
     b = 0;
     while (b < 2) {
@@ -163,36 +165,44 @@ White is a simple programming language that includes fundamental programming con
         b = b + 1;
     }
     e= e + 1;
-}
+}`
 
 ***Comments***
-* 	Comments are written between ~ symbols.
+* 	Comments are written between `~...~` symbols.
 
 ***try-catch***
-* a = 10;
-  b = 0;
 
-try {
+* `a = 10;
+  b = 0;`
+
+`try {
     c = a % b;  
     print(c);
 } catch (e) {
     print(a);  
-}
+}`
 
 
- func g() {
+ `func g() {
     a = 10;
     print(a);
-} 
+}` 
 
-func g(a) { 
-    
+`func g(a) { 
     print(a);
-}
+}`
+ 
+***Design Decisions***
+* ``Simplicity:`` Minimalist syntax inspired by C-style languages for ease of learning.
+* ``Unified Expression Handling:`` Expressions support both arithmetic and logical operations uniformly.
+* ``Comments:`` Chose ~ delimiters for clarity and to avoid conflict with other symbols.
+* ``Exception Handling:`` Integrated try-catch mechanism to handle runtime errors.
+* ``Single Entry Point:`` Program starts with function declarations, like many modern languages.
+* ``File-based Execution:`` Programs are piped into the interpreter using < operator for flexibility.
 
 ***Running a White Program***
-*      To compile and run a White program, use the following command:
-make ./exampleprog < example.wt 
+*    To compile and run a White program, use the following command:
+`make ./exampleprog < example.wt `
 
 
 
