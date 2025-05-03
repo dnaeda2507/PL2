@@ -88,9 +88,6 @@
 // Comment Statements
 
 `<comment_stmt> ::= "~" <character>* "~"`
-
-// Characters
-
 `<character> ::= "'" [a-zA-Z0-9_ .,!?] "'"`
 ### Explanations about the White Programming Language
 -------------------------------------------------------
@@ -103,7 +100,6 @@ White is a simple programming language that includes fundamental programming con
 * 	A program consists of at least one statement.
 *	A statement can be one of the following: 
        - ``Variable assignments``
-	   - ``Constant definitions``
 	   - ``If-else conditions``
 	   - ``Loops (while)``
 	   - ``Commands like print, exit, or input``
@@ -116,9 +112,8 @@ White is a simple programming language that includes fundamental programming con
 *	Taking Input:
     - `input(identifier)` is used to take user input.
 
-***Variables and Constants***
+***Variables***
 * 	Variables are assigned using `=` and can store different data types.
-*	Constants are defined using the const keyword.
 
 ***Data Types:***
    -   ``Integer:`` 123
@@ -207,7 +202,7 @@ White is a simple programming language that includes fundamental programming con
 
 ***Running a White Program***
 *    To compile and run a White program, use the following command:
-`make ./exampleprog < example.wt `
+`make ./white < example.wt `
 
 
 
