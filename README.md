@@ -120,12 +120,8 @@ White is a simple programming language that includes fundamental programming con
 * 	Variables are assigned using `=` and can store different data types.
 *	Constants are defined using the const keyword.
 
-*Data Types:*
-   -   ``Boolean:`` true, false
+***Data Types:***
    -   ``Integer:`` 123
-   -   ``Float:`` 3.14
-   -   ``Character:`` 'a'
-   -  ``String:`` "Hello"
    -  ``Identifiers:`` Variable names must start with a letter and can contain letters, numbers, and underscores
 
 ***Functions***
