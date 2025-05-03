@@ -140,17 +140,26 @@ White is a simple programming language that includes fundamental programming con
  Code blocks are enclosed in `{}` and support nested statements
 
 ***Control Flow***
-* `if (a < b) {
-    print(a);
-    if (c > a) {
-        print(c);
-    } else {
+
+* 
+`` d = 10;
+   b = 20;
+   c = 30;``
+
+``if ((d > 5 && b < 25) || c > 40) {
+    print(d);
+    if (b > 15) {
         print(b);
+        if (c == 30) {
+            print(c);
+        }
     }
 } else {
-    print(b);
-}`
-* `while (e < 3) {
+    print(d);
+}``
+* ``e = 0;``
+
+ `while (e < 3) {
     print(e);
     b = 0;
     while (b < 2) {
